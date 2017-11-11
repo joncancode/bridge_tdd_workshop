@@ -1,6 +1,7 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { mount, shallow, render } from 'enzyme';
 import sinon from 'sinon';
+import './main.css';
 
 import TextInput from './index';
 
@@ -9,14 +10,6 @@ describe('<TextInput />', () => {
     const wrapper = render(<TextInput />);
     expect(wrapper.text()).toContain('this is the test');
   });
-
-  it('simulates click events', () => {
-    const onButtonClick = sinon.spy();
-    const wrapper = shallow(<TextInput onButtonClick={onButtonClick} />);
-    wrapper.find('button').simulate('click');
-    expect(onButtonClick).to.have.property('callCount', 1);
-  });
-
 
 });
 
