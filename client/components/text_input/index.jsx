@@ -28,6 +28,7 @@ export default class TextInput extends Component {
           {this.state.statement}
         </h2>
         <button onClick={e => this.handleClick(e)}>Click</button>
+        <img src="https://i.pinimg.com/originals/c4/dd/5d/c4dd5d671bb86d8551e9697c2d9ece06.gif" />
       </div>
     );
   }

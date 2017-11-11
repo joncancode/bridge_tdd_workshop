@@ -17,8 +17,6 @@ describe('<TextInput />', () => {
     expect(wrapper.text.length).toBeGreaterThan(e);
   });
 
-
-
 });
 
 describe('A spy', function() {
