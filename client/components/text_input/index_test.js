@@ -1,15 +1,23 @@
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
 import sinon from 'sinon';
-import './main.css';
 
 import TextInput from './index';
 
 describe('<TextInput />', () => {
   it('renders text when text is added', () => {
     const wrapper = render(<TextInput />);
-    expect(wrapper.text()).toContain('this is the test');
+    expect(wrapper.text()).toContain("a string");
   });
+
+  it('should have green text under 10 chars and red otherwise', () => {
+    let e = 0
+
+    const wrapper = render(<TextInput />);
+    expect(wrapper.text.length).toBeGreaterThan(e);
+  });
+
+
 
 });
 
